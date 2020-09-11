@@ -80,9 +80,8 @@ SELECT name,population,area
 
 SELECT name, population,area
   FROM world
-  WHERE
-  (population>250000000 OR area>3000000)
-  AND NOT(population>250000000 AND area>3000000)
+  WHERE area > 3000000
+    XOR population > 250000000
 ;
 
 
